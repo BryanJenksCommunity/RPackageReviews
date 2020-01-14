@@ -1,0 +1,119 @@
+---
+title: "Magrittr"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(magrittr) # %>%
+
+```
+
+# The Pipe %>%
+
+```{r normalPipe}
+
+# General operation moving forward
+# CTRL-SHIFT-M
+
+c(5,4,2,6,3,4,3,4,6) %>%
+    mean()
+
+mean(c(5,4,2,6,3,4,3,4,6))
+
+# The pipe is like the unix command line pipe, 
+#   take output of left and pipe into the right
+# The pipe in R differs in that you can break lines 
+#   and it doesnt need to be STDIN or STDOUT
+
+#------------------------------------------------#
+
+# Taking a forward moving operation and assigning it to a variable 
+
+# read this as:
+#   "X receives the value of the vector going through the mean function"
+
+x <- c(5,4,2,6,3,4,3,4,6) %>% 
+    mean()
+
+cat("the value of x is: ", x)
+```
+
+# The Compound Pipe %<>%
+
+```{r compoundPipe}
+
+# Normal pipe pushes results forward through processes 
+#   the compound pipe pushes the operation forward but also assigns the result 
+#       back to the initial object, basically it becomes '<-' 
+
+# first y contains this vector of numbers
+y <- c(5,4,2,6,3,4,3,4,6)
+
+# Then we compound pipe that vector into the mean function and the result of 
+#   the mean function is then re-assigned to y, akin to:
+#       y = mean(y)
+y %<>% mean()
+
+cat("the value of y is: ", y)
+```
+
+# The Exposition Pipe %$%
+
+```{r espositionPipe}
+
+# When piping this tribble forward it assumes i want to 
+#   calculate the mean of both vectors
+
+tibble::tribble(
+    ~name, ~age,
+    "john", 26,
+    "karen", 54,
+    "susan", 45,
+    "joe", 16
+) %>%
+    mean(age) # this does not work
+
+#------------------------------------------------#
+
+# when using the exposition pipe %$% it allows you to use the names of the 
+#   content on the 'left hand side' of the piping operation and therefore 
+#       reference only the numeric vector in the mean function.
+
+# so what appears in the mean function is equivalently exampleTribble$age
+
+tibble::tribble(
+    ~name, ~age,
+    "john", 26,
+    "karen", 54,
+    "susan", 45,
+    "joe", 16
+) %$%
+    mean(age) # and so this works
+
+```
+
+# the Tee pipe
+
+```{r teePipe}
+
+# pipe a a value forward but return the original value
+
+#        value -------------> into a function (This is not returned)
+#                    |
+#                    |
+#                    |
+#                    |
+#                    |
+#                    V
+#                    Returned Result
+
+
+# value is piped into the mean function but only vector is returned
+c(5,4,2,6,3,4,3,4,6) %T>% mean() # Shows only the vector
+
+# This is useful when an expression is used for its side-effect, say plotting or printing.
+c(5,4,2,6,3,4,3,4,6) %T>% plot() # shows the vector and the plot
+
+```
