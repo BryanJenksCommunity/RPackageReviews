@@ -1,0 +1,101 @@
+---
+title: "Vitae"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(vitae)
+```
+
+> _The vitae package makes creating and maintaining a Résumé or CV with R Markdown simple. It provides a collection of LaTeX templates, with helpful functions to add content to the documents. These functions allow you to dynamically include CV entries from any data source, which is particularly useful when this data is obtained/prepared by other R packages._
+
+---
+
+\tableofcontents
+\pagebreak
+
+# The Meat & Potatoes
+
+## Workflow
+
+- Build out template CV with
+    + YAML 
+    + Sections
+    + Functions
+    + Data scripts
+- When information changes, update the data sources the scripts pull from and re-run your CV
+
+## YAML Header Options 
+
+- **name**: Your name
+- **surname**: Your family or last name
+- **position**: Your current workplace title or field
+- **address**: Your address
+- **date**: The current date
+- **profilepic**: A local file path to an image
+- **www**: Your website address
+- **email**: Your email address
+- **twitter**: Your twitter handle
+- **github**: Your GitHub handle
+- **linkedin**: Your LinkedIn username
+- **aboutme**: A short description that is included in a template specific location
+- **headcolor**: A featured colour for the template [^1] 
+- **docname**: Control the document name (typically curriculum vitae, or résumé)
+- **output**: vitae::awesomecv ^[This is what i use in my data driven cv]
+
+[^1]:this is an example footnote
+
+## Output Formats
+
+- `vitae::awesomecv` 
+- `vitae::hyndman`
+- `vitae::latexcv`
+- `vitae::moderncv`
+- `vitae::twentyseconds`
+- `vitae::cvformats`
+
+## Functions
+
+The entries drive the content of the CV and it can sometimes be a tad confusing which parts correspond to which sections
+
+### Detailed Entries
+
+```{r Detailed_Entries, eval=FALSE}
+
+vitae::detailed_entries(
+    ,what = 
+    ,when = 
+    ,with = 
+    ,where = 
+    why = 
+)
+
+```
+
+### Brief Entries
+
+```{r Brief_Entries, eval=FALSE}
+
+vitae::brief_entries(
+    ,what = 
+    ,when = 
+    with = 
+)
+
+```
+
+### Bibliography Entries
+
+```{r Bibliography_Entries, eval=FALSE}
+
+vitae::bibliography_entries(
+    file = 
+    ,title = 
+    ,sorting = 
+    ,startlabel = 
+    endlabel =
+)
+
+```
