@@ -16,7 +16,7 @@ My List of my most commonly used R packages, what they're used for and my review
 
 - **skimr**: [:octocat:](https://github.com/ropensci/skimr)
 - **Data.Table**: [:octocat:](https://github.com/Rdatatable/data.table)
-- **Magrittr**: [:movie_camera:](https://www.youtube.com/watch?v=03kD1sgSyQI) [:octocat:](https://github.com/tidyverse/magrittr) [:page_facing_up:](./examples/magrittr)
+- **Magrittr**: [:octocat:](https://github.com/tidyverse/magrittr) [:movie_camera:](https://www.youtube.com/watch?v=03kD1sgSyQI) [:page_facing_up:](./examples/magrittr)
 - **Tibble**: [:octocat:](https://github.com/tidyverse/tibble) 
 
 ### Data Cleaning
