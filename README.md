@@ -2,13 +2,22 @@
 
 My List of my most commonly used R packages, what they're used for and my review videos on them
 
+## Key
+
+:page_facing_up: _Examples_
+
+:movie_camera: _YouTube Video_
+
+:octocat: _Official Repo_
+
 ## Category
 
 ### Analysis
 
-[Skimr](https://github.com/ropensci/skimr) Simple summary statistics
-[Data.Table](https://github.com/Rdatatable/data.table) Data frames but blazingly fast
-[:movie_camera:](https://www.youtube.com/watch?v=03kD1sgSyQI) [Magrittr](https://github.com/tidyverse/magrittr) Dat Pipe Doe `%>%` [Example](./examples/magrittr) [Tibble](https://github.com/tidyverse/tibble) Create tables through tribble()
+- **skimr**: [:octocat:](https://github.com/ropensci/skimr)
+- **Data.Table**: [:octocat:](https://github.com/Rdatatable/data.table)
+- **Magrittr**: [:movie_camera:](https://www.youtube.com/watch?v=03kD1sgSyQI) [:octocat:](https://github.com/tidyverse/magrittr) [:page_facing_up:](./examples/magrittr)
+- **Tibble**: [:octocat:](https://github.com/tidyverse/tibble) 
 
 ### Data Cleaning
 
