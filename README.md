@@ -36,32 +36,32 @@ My List of my most commonly used R packages, what they're used for and my review
 - **Bookdown**: [:octocat:](https://github.com/rstudio/bookdown)
 - **Tufte**: [:octocat:](https://github.com/rstudio/tufte)
 - **Vitae**: [:octocat:](https://github.com/mitchelloharawild/vitae) [:movie_camera:](https://www.youtube.com/watch?v=ntQvuCZpqjQ) [:page_facing_up:](./examples/vitae) [:page_facing_up:](https://github.com/tallguyjenks/CV)
-- **RMarkdown**: [:octocat:](https://github.com/rstudio/rmarkdown) [:movie_camera:](https://bit.ly/2E1E4lN) [:page_facing_up:](./examples/)
+- **RMarkdown**: [:octocat:](https://github.com/rstudio/rmarkdown) [:movie_camera:](https://bit.ly/2E1E4lN)
 
 ### Diagrams
 
-[DiagrammeR](https://github.com/rich-iannone/DgrammeR) Create custom diagrams all with R
+- **DiagrammeR**: [:octocat:](https://github.com/rich-iannone/DgrammeR)
 
 ### Navigation
 
-| [:movie_camera:](https://www.youtube.com/watch?v=5ZfFLamFBZM) [Here](https://github.com/r-lib/here) Simple file path management
+- **Here**: [:octocat:](https://github.com/r-lib/here) [:movie_camera:](https://www.youtube.com/watch?v=5ZfFLamFBZM)
 
 ### Notification
 
-[Blastula](https://github.com/rich-iannone/blastula) Send Emails from R
-[:movie_camera:](https://youtu.be/rcE_E5vMTgg) [Beepr](https://github.com/rasmusab/beepr) Make Beep Notification sounds
+- **Blastula**: [:octocat:](https://github.com/rich-iannone/blastula)
+- **Beepr**: [:octocat:](https://github.com/rasmusab/beepr) [:movie_camera:](https://youtu.be/rcE_E5vMTgg)
 
 ### Visualization
 
-[ggplot2](https://github.com/tidyverse/ggplot2) Create beautiful custom data visualizations
-[Patchwork](https://github.com/thomasp85/patchwork) Create a single image containing multiple ggplots
-[Plotly](https://github.com/ropensci/plotly) Create interactive ggplots
+- **ggplot2**: [:octocat:](https://github.com/tidyverse/ggplot2)
+- **Patchwork**: [:octocat:](https://github.com/thomasp85/patchwork)
+- **Plotly**: [:octocat:](https://github.com/ropensci/plotly)
 
 ### tables
 
-[KableExtra](https://github.com/haozhu233/kableExtra) Table Generation
-[DT](https://github.com/rstudio/DT) HTML Dynamic Tables with Sort/Filter/Search/Pagination
+- **KableExtra**: [:octocat:](https://github.com/haozhu233/kableExtra)
+- **DT**: [:octocat:](https://github.com/rstudio/DT)
 
 ### Fun
 
-[:movie_camera:](https://www.youtube.com/watch?v=G-QuYafXdgk) [Runes](https://github.com/tallguyjenks/runes) Elder Futhark Runes In R!
+- **Runes**: [:octocat:](https://github.com/tallguyjenks/runes) [:movie_camera:](https://www.youtube.com/watch?v=G-QuYafXdgk)
