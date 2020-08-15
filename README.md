@@ -18,6 +18,7 @@ My List of my most commonly used R packages, what they're used for and my review
 - **RMarkdown**: [:octocat:](https://github.com/rstudio/rmarkdown) [:movie_camera:](https://bit.ly/2E1E4lN)
 - **Runes**: [:octocat:](https://github.com/tallguyjenks/runes) [:movie_camera:](https://www.youtube.com/watch?v=G-QuYafXdgk)
 - **Vitae**: [:octocat:](https://github.com/mitchelloharawild/vitae) [:movie_camera:](https://www.youtube.com/watch?v=ntQvuCZpqjQ) [:page_facing_up:](./examples/vitae) [:page_facing_up:](https://github.com/tallguyjenks/CV)
+- **Todor**: [:octocat:](https://github.com/dokato/todor) [:movie_camera:]() [:page_facing_up:](./examples/todor)
 
 ## To Be Reviewed
 
@@ -37,7 +38,6 @@ My List of my most commonly used R packages, what they're used for and my review
 - **Skimr**: [:octocat:](https://github.com/ropensci/skimr)
 - **TestThat**: [:octocat:](https://github.com/r-lib/testthat)
 - **Tibble**: [:octocat:](https://github.com/tidyverse/tibble)
-- **Todor**: [:octocat:](https://github.com/dokato/todor)
 - **Tufte**: [:octocat:](https://github.com/rstudio/tufte)
 
 

@@ -1,0 +1,92 @@
+---
+title: "todor-notes"
+author: "Bryan Jenks"
+date: "8/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(todor)
+```
+
+```{r the_plain_function}
+# What the function actually does ----
+
+# TODO here is a comment follow up note
+todor::todor()
+```
+
+```{r single_file_call}
+# HINT: By default todor works on projects, but you can call todor_package to search an entire package.
+
+# Call todor on a single file only, default is project ----
+# ....Files could work with the here() package ----
+todor::todor_file("notes.Rmd")
+```
+
+```{r pkg_calls}
+# Calling todor on a whole package ----
+todor::todor_package()
+```
+
+```{r addin_func_calls}
+# Addins menu options ----
+# ....can call on a single file ----
+todor::todor_file_addin()
+# ....Can call on a whole package ----
+todor::todor_package_addin()
+# ....Or a whole project with a .Rproj file ----
+todor::todor_project_addin()
+```
+
+```{r specific_types}
+# Look for specific types ----
+# FIXME this is a fixit comment, refactor this item!!!1
+todor::todor(c("TODO", "FIXME"))
+# Types it can detect by default ----
+## FIXME, TODO, CHANGED, IDEA, HACK, NOTE, REVIEW, BUG, QUESTION, COMBAK, TEMP.
+# ....how to change searchable types for the function ----
+options(todor_patterns = c("FIXME", "TODO", "BRYAN"))
+
+# BRYAN this is not in all caps
+```
+
+# Markdown Comments
+
+<!-- BUG Change this section. -->
+
+**Very important element.**
+
+# Controlling TODOR Behavior
+
+`todor_rmd` - when set to TRUE it searches also through Rmd files (default TRUE).
+
+`todor_rnw` - when set to TRUE it searches also through Rnw files (default FALSE).
+
+`todor_rhtml` - when set to TRUE it searches also through Rhtml files (default FALSE).
+
+`todor_exlude_packrat` - when set to FALSE, all files in the "packrat" directory are excluded (default TRUE).
+
+`todor_exclude_r` - when TRUE, it ignores R and r files (default FALSE)
+
+
+```{r search_opts}
+# This is to expand the scope of searches ----
+# ....how to switch off markdown search ----
+options(todor_rmd = T) # default is on  / TRUE
+# ....how to switch off rnw search ----
+options(todor_rnw = T) # sweave files
+# ....how to switch off rhtml search ----
+options(todor_rhtml = T) # R Notebooks
+# ....how to switch off packrat search ----
+options(todor_exclude_packrat = T) # ignore all notes in files downloaded by packrat you probably very much want this
+# ....how to switch off r/R search ----
+options(todor_exclude_r = F) # rscript files you probably dont want to ignore these default is FALSE
+```
+
+
+
+
+
+

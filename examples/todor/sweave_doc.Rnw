@@ -1,0 +1,9 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+% HACK here is a comment
+
+
+\end{document}
