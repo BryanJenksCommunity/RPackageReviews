@@ -1,0 +1,150 @@
+---
+title: "Untitled"
+author: "Bryan Jenks"
+date: "8/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.height=9,
+                      fig.width=9)
+
+# Import Necessary Libraries
+library(ggplot2)    # Create charts to display
+library(patchwork)  # Organize chart display with simple syntax
+library(dplyr)      # Data filtering during plot generation
+
+```
+
+```{r Top_to_Bottom}
+
+# =============================== #
+# Assign your plots to variables  #
+# =============================== #
+
+top <- ggplot(diamonds) +
+ aes(x = cut, y = carat, fill = color) +
+ geom_boxplot() +
+ scale_fill_hue() +
+ theme_minimal()
+
+bottom <- ggplot(diamonds) +
+ aes(x = color, fill = clarity) +
+ geom_bar() +
+ scale_fill_hue() +
+ theme_minimal()
+
+# ========================================================= #
+# Simple math-like syntax to organize your plots vertically #
+# ========================================================= #
+
+top / bottom
+
+```
+
+
+```{r Side_by_Side}
+
+
+# =============================== #
+# Assign your plots to variables  #
+# =============================== #
+
+left <- mpg %>%
+ filter(!(manufacturer %in% c("audi", "chevrolet", "land rover", "mercury", 
+"toyota", "volkswagen"))) %>%
+ ggplot() +
+ aes(x = model, y = manufacturer, fill = cyl) +
+ geom_tile(size = 1L) +
+ scale_fill_gradient() +
+ theme_minimal()
+
+right <- ggplot(mpg) +
+ aes(x = class, fill = class) +
+ geom_bar() +
+ scale_fill_hue() +
+ coord_flip() +
+ theme_minimal()
+
+
+# ================================================= #
+# Simple syntax to organize your plots horizontally #
+# ================================================= #
+
+left + right
+
+
+```
+
+```{r Patchwork_Without_Variables}
+
+# ================================= #
+# Generate your plots then combine  #
+# ================================= #
+
+ mpg %>%
+ filter(!(manufacturer %in% c("audi", 
+                              "chevrolet", 
+                              "land rover", 
+                              "mercury", 
+                              "toyota", 
+                              "volkswagen"))) %>%
+ ggplot() +
+ aes(x = model, y = manufacturer, fill = cyl) +
+ geom_tile(size = 1L) +
+ scale_fill_gradient() +
+ theme_minimal() + # <-- HERE IS THE EXTRA PLUS SYMBOL
+ggplot(mpg) +
+ aes(x = class, fill = class) +
+ geom_bar() +
+ scale_fill_hue() +
+ coord_flip() +
+ theme_minimal()
+
+# ================================================== #
+# Without Variables you can also just add your 
+# ggplots together with another plus symbol like the 
+# native ggplot2 syntax so it all flows seamlessly
+# ================================================== #
+
+```
+
+```{r Smart_Grid_Format}
+
+# ======================================================= #
+# By default, patchwork will try to keep the grid square,
+# and fill it out in row order
+# ======================================================= #
+
+top + bottom + left + right
+
+```
+
+```{r Custom_Grid}
+
+# =========================================================== #
+# This can be controlled with the addition of a plot_layout()
+# =========================================================== #
+
+top + bottom + left + right + plot_layout(nrow = 3, byrow = FALSE)
+```
+
+```{r Stacking_and_Packing}
+
+# =============================================== #
+# Using a simple syntax we can easily control the 
+# layout of the plots 
+# =============================================== #
+
+(left | (top / bottom)) / right
+
+```
+
+```{r Titling_The_Aggregate_Display}
+
+
+(left | (top / bottom)) + 
+  plot_annotation(title = 'The awesomeness that is Patchwork')
+
+```
