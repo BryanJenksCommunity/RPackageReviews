@@ -21,6 +21,10 @@ My List of my most commonly used R packages, what they're used for and my review
 - **Todor**: [:octocat:](https://github.com/dokato/todor) [:movie_camera:](https://www.youtube.com/watch?v=f4mTYyD2C-8) [:page_facing_up:](./examples/todor)
 - **Vitae**: [:octocat:](https://github.com/mitchelloharawild/vitae) [:movie_camera:](https://www.youtube.com/watch?v=ntQvuCZpqjQ) [:page_facing_up:](./examples/vitae) [:page_facing_up:](https://github.com/tallguyjenks/CV)
 
+## NEXT
+
+- **tracestack**: [:octocat:](https://github.com/dgrtwo/tracestack)
+
 
 ## To Be Reviewed
 
